@@ -1,0 +1,216 @@
+/**
+ * FAT PONY SOCIAL SHARE PLUGIN
+ * @author      Erica Franz | Fat Pony
+ * @link        http://fatpony.me/
+ * @copyright   Copyright (c) 2014, Fat Pony
+ * @license     GPL-2.0+
+ * @version     1.0.1
+ *
+ * Adapted from the Social Share Starter Plugin by KK
+ * @link        http://newinternetorder.com/giveaway-heres-why-social-share-counters-suck-plus-what-i-can-give-you-that-doesnt/
+ */
+
+/* MAIN CONTAINER - sets the stage for our children */
+.post-social {
+	margin-top: -20px;
+	text-align: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+/* We need to tell our first two children how to behave before we can tell the grandchildren what to do. Applies to the post-social-count and post-social-button divs. */
+.post-social div {
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-moz-box-flex: 0;
+	-webkit-align-self: stretch;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+}
+
+/* Style our total share count container */
+.post-social-count {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	background-color: #222;
+	color: white;
+	font-size: 30px;
+	vertical-align: middle;
+	font-weight: 400;
+	padding: 22px 40px;
+}
+
+/* Style the word "share" that we previously wrapped in a span to easily target. */
+.post-social-count span {
+	font-size: 18px;
+	font-family: "Proxima Nova";
+	font-style: normal;
+	margin-top: -5px;
+	vertical-align: middle;
+	display: block;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* Let the wrapping begin. Need to wrap our button containers in a container. */
+.post-social-buttons {
+	-webkit-box-flex: 3;
+	-moz-box-flex: 3;
+	-webkit-flex: 3 1 auto;
+	-ms-flex: 3 1 auto;
+	flex: 3 1 auto;
+}
+
+/* Give our two rows of buttons each their flexbox styles so the buttons can expand and fill the available space. */
+.post-social-flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+}
+
+/* Now flex the buttons. */
+.post-social a {
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	-webkit-flex: 0 1 50%;
+	-ms-flex: 0 1 50%;
+	flex: 0 1 50%;
+	-webkit-align-self: stretch;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+}
+
+/* We need to allow the Google+, LinkedIn and Pinterest buttons to flex to their own limitations instead of the specified limits we placed on buttons globally. */
+.post-social a.google-plus,
+.post-social a.linkedin,
+.post-social a.pinterest {
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	-webkit-align-self: stretch;
+	-ms-flex-item-align: stretch;
+	align-self: stretch;
+}
+
+/* Spacing between our social icons and word. */
+.post-social i {
+	margin-right: 8px;
+}
+
+/* Use each social brand's colors for a hover effect. Thanks to http://brandcolors.net/ */
+.post-social .twitter:hover {
+	background-color: #55acee;
+}
+.post-social .facebook:hover {
+	background-color: #3b5998;
+}
+.post-social .google-plus:hover {
+	background-color: #dd4b39;
+}
+.post-social .linkedin:hover {
+	background-color: #0976b4;
+}
+.post-social .pinterest:hover {
+	background-color: #cc2127;
+}
+
+/* Kill the button container flexbox and set all of our social buttons to 100% width. */
+@media all and (max-width: 660px) {
+	.post-social-flex {
+		display: block;
+	}
+	.post-social a {
+		width: 100%;
+	}
+}
+
+/* Make a final adjustment to our share count flex to maintain it's width integrity. */
+@media all and (max-width: 630px) {
+	.post-social-count {
+		-webkit-box-flex: 2;
+		-webkit-flex: 2 1 155px;
+		-ms-flex: 2 1 155px;
+		flex: 2 1 155px;
+		padding: 20px;
+	}
+}
+
+/* Size down the word "share" and we're done! */
+@media all and (max-width: 400px) {
+    .post-social-count span {
+		font-size: 14px;
+	}
+}
