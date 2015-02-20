@@ -85,7 +85,7 @@ function fatpony_post_social() {
             $content .= '<div class="post-social-flex">';
 			
 		//* Create our Twitter Button
-            $content .= '<a href="http://twitter.com/home?status=' . $title . '%20' . $prettylink . '%20@' . $twitter . '';
+            $content .= '<a href="//twitter.com/home?status=' . $title . '%20' . $prettylink . '%20@' . $twitter . '';
 				
             /** Create our category hashtags - plan ahead when creating your Category slugs. 
 			*	Could also modify to use the Tag slugs of your post, 
@@ -108,7 +108,7 @@ function fatpony_post_social() {
             $output .= '" class="button twitter" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-twitter"> </i>Share on Twitter</a>';
 			
 		//* Create our Facebook Button
-            $content .= '<a href="http://www.facebook.com/share.php?u=' . $permalink . '&amp;title=" class="button facebook" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-facebook"> </i>Share on Facebook</a>';
+            $content .= '<a href="//www.facebook.com/share.php?u=' . $permalink . '&amp;title=" class="button facebook" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-facebook"> </i>Share on Facebook</a>';
 			
 		//* Closing div for CSS Flexbox row 1
             $content .= '</div>';
@@ -117,13 +117,13 @@ function fatpony_post_social() {
             $content .= '<div class="post-social-flex">';
 			
 		//* Create our Google+ Button
-            $content .= '<a href="https://plus.google.com/share?url=' . $permalink . '" class="button google-plus" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-google-plus"> </i>Google+</a>';
+            $content .= '<a href="//plus.google.com/share?url=' . $permalink . '" class="button google-plus" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-google-plus"> </i>Google+</a>';
 			
 		//* Create our LinkedIn Button
-            $content .= '<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=' . $permalink . '&amp;title=' . $title . '&amp;summary=' . $excerpt . '&amp;source=' . $homeurl . '" class="button linkedin" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-linkedin"> </i>LinkedIn</a>';
+            $content .= '<a href="//www.linkedin.com/shareArticle?mini=true&amp;url=' . $permalink . '&amp;title=' . $title . '&amp;summary=' . $excerpt . '&amp;source=' . $homeurl . '" class="button linkedin" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-linkedin"> </i>LinkedIn</a>';
 
 		//* Create our Pinterest Button
-            $content .= '<a href="http://pinterest.com/pin/create/button/?url=' . $permalink . '&media=' . $imageurl . '&description=' . $excerpt . '" class="button pinterest" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-pinterest"> </i>Pinterest</a>';
+            $content .= '<a href="//pinterest.com/pin/create/button/?url=' . $permalink . '&media=' . $imageurl . '&description=' . $excerpt . '" class="button pinterest" target="_blank" onclick="window.open(this.href,this.target,\'width=500,height=400\');return false;"><i class="fa fa-pinterest"> </i>Pinterest</a>';
 			
 		//* Closing div for CSS Flexbox row 2
             $content .= '</div>';
