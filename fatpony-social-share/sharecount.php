@@ -35,13 +35,25 @@ function fatpony_sharecount_calculate() {
 
 		foreach($bitfields as $feature) {
 			if($version['features'] & constant($feature)) {
-				$real_shares = new shareCount(get_permalink());
+				// Replace https with http so we can count both ssl and non-ssl shared urls
+				$us_permalink = str_replace( 'https://', 'http://', get_permalink() );
+				
+				// Get the https (default) url
+				$real_shares = new shareCount( get_permalink() );
+				
+				// Get the http url
+				$us_real_shares = new shareCount( $us_permalink );
 				
 				$real_shares_count += $real_shares->get_tweets();
+				$real_shares_count += $us_real_shares->get_tweets();
 				$real_shares_count += $real_shares->get_fb();
+				$real_shares_count += $us_real_shares->get_fb();
 				$real_shares_count += $real_shares->get_linkedin();
+				$real_shares_count += $us_real_shares->get_linkedin();
 				$real_shares_count += $real_shares->get_plusones();
+				$real_shares_count += $us_real_shares->get_plusones();
 				$real_shares_count += $real_shares->get_pinterest();
+				$real_shares_count += $us_real_shares->get_pinterest();
 				break;
 			}
 		}
